@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My GitHub Pages Site</title>
+
+  <style>
+    :root {
+      --accent: #0078d7;
+      --bg: #f7f9fc;
+      --text: #222;
+      --card-bg: #fff;
+    }
+
+    body {
+      font-family: "Inter", "Segoe UI", sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+    }
+
+    header {
+      width: 100%;
+      padding: 1rem 0;
+      text-align: center;
+      color: white;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      background: linear-gradient(270deg, rgb(106, 0, 255), rgb(8, 6, 153), rgb(2, 126, 214),
+                                rgb(56, 98, 187), rgb(4, 122, 122), blue, rgb(94, 49, 142));
+      background-size: 1500% 1500%;
+      animation: colorShift 60s ease infinite,
+                pulse 6s ease-in-out infinite,
+                float 8s ease-in-out infinite;
+    }
+
+     @keyframes colorShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.07); }
+    }
+
+    @keyframes float {
+        0%   { transform: translate(0px, 0px); }
+        25%  { transform: translate(2px, -3px); }
+        50%  { transform: translate(2px, 2px); }
+        75%  { transform: translate(3px, 1px); }
+        100% { transform: translate(0px, 0px); }
+    }
+
+    main {
+      max-width: 700px;
+      width: 90%;
+      margin: 2rem auto;
+      text-align: center;
+    }
+
+ 
+    .card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 2rem;                             
+    justify-items: center;
+    margin: 2rem 0;
+    }
+
+    .card {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease;
+    width: 300px; 
+    text-align: center;
+    
+    }
+
+    .card:hover {
+    transform: translateY(-3px);
+    }
+
+    
+    @media (max-width: 600px) {
+    .cards-grid {
+    grid-template-columns: 1fr; 
+    }
+}
+
+
+    h1, h2 {
+      margin-top: 0;
+    }
+
+    footer {
+      margin-top: auto;
+      padding: 1rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    button {
+      margin-top: 1rem;
+      padding: 0.6rem 1.2rem;
+      background: var(--accent);
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      
+    }
+
+    button:hover {
+      background: #005fa3;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Connor Knowles</h1>
+    <h3>Welcome to my site!</h3>
+  </header>
+
+  <main>
+    <div class="card-grid">
+        <div class="card">
+            <h2>Github </h2>
+            <p>Click here to access my Github page</p>
+            <a href = "https://github.com/cknowles01">
+            <button onclick="sayHello()">Click me</button></a>
+        </div>
+
+        <div class="card">
+            <h2>Force-Directed Graph Visualization Project</h2>
+            <p>Project using d3 and observable plot to create a force-directed graph of FBS college football teams</p>
+            <a href = "https://observablehq.com/d/fa2b50b6970e269f">
+            <button onclick="sayHello()">Click me</button></a>
+        </div>
+
+        <div class="card">
+            <h2>Spotify API Command Line Tool</h2>
+            <p>Command line tool that returns the most popular songs and albums by an artist using Spotify's API </p>
+            <a href = "https://github.com/cknowles01/Spotify-API-Work">
+            <button onclick="sayHello()">Github Repo</button></a>
+        </div>
+
+        <div class="card">
+            <h2>Godot Procedural Generation Game</h2>
+            <p>Game made in Godot engine, using procedural generation to create a dungeon system</p>
+            <a href = "https://github.com/cknowles01/Spotify-API-Work">
+            <button onclick="sayHello()">Github Repo</button></a>
+        </div>
+    
+    
+
+
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2025 Connor Knowles — <a href="https://github.com/yourusername">GitHub</a></p>
+  </footer>
+
+
+</body>
+</html>
