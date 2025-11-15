@@ -1,0 +1,34 @@
+[
+
+  {
+    "id": 1,
+    "title": "Force-Directed Graph Visualization Project",
+    "description": "Project using d3 and observable plot to create a force-directed graph of FBS college football teams",
+    "tags": ["Data Visualization", "React", "d3", "javascript"],
+    "year": "2023",
+    "featured": true,
+    
+    "demo": "https://observablehq.com/d/fa2b50b6970e269f",
+    "status": "Completed"
+  },
+  {
+    "id": 2,
+    "title": "Godot Procedural Generation Game",
+    "description": "Game made in Godot engine using procedural generation to create a dungeon system",
+    "tags": ["Game Development", "Procedural Generation", "Scripting"],
+    "year": "2023",
+    "featured": true,
+    "github": "https://github.com/cknowles01/gbcgame",
+    "status": "Completed"
+  },
+  {
+    "id": 3,
+    "title": "Spotify API Command-Line Tool",
+    "description": "Command line tool that returns the most popular songs and albums by an artist using Spotify's API",
+    "tags": ["Software Engineering", "Python", "API"],
+    "year": "2023",
+    "featured": true,
+    "github": "https://github.com/cknowles01/Spotify-API-Work",
+    "status": "Active"
+  }
+]

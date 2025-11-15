@@ -1,0 +1,68 @@
+---
+import profile from '../data/profile.json';
+---
+
+<section class="section-container">
+  <div class="max-w-4xl mx-auto text-center">
+    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-blue-600 bg-clip-text text-transparent">
+      {profile.name}
+    </h1>
+    
+    <p class="text-xl sm:text-2xl text-gray-700 dark:text-gray-300 mb-4">
+      {profile.title}
+    </p>
+    
+    <p class="text-lg text-gray-600 dark:text-gray-400 mb-8">
+      {profile.institution} • {profile.location}
+    </p>
+    
+    <p class="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">
+      {profile.bio}
+    </p>
+    
+    <div class="flex flex-wrap justify-center gap-3 mb-12">
+      {profile.researchKeywords.map((keyword) => (
+        <span class="px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium">
+          {keyword}
+        </span>
+      ))}
+    </div>
+    
+    <div class="flex flex-col sm:flex-row justify-center gap-4">
+      <a href="/projects" class="btn-primary">
+        View Projects
+      </a>
+      <a href="/contact" class="btn-secondary">
+        Get in Touch
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Honors Section -->
+<section class="section-container bg-gray-50 dark:bg-gray-800/50">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Accomplishments & Academic Projects</h2>
+    
+    <div class="space-y-6">
+      {profile.honors.map((honor) => (
+        <div class="card p-6">
+          <div class="flex flex-col md:flex-row md:items-start md:justify-between mb-2">
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100">
+              {honor.title}
+            </h3>
+            <span class="text-primary-600 dark:text-primary-400 font-medium mt-1 md:mt-0">
+              {honor.year}
+            </span>
+          </div>
+          <p class="text-gray-600 dark:text-gray-400 mb-2">
+            {honor.institution || honor.event}
+          </p>
+          <p class="text-gray-700 dark:text-gray-300">
+            {honor.description}
+          </p>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,63 @@
+{
+  "name": "Connor Knowles",
+  "title": "Student",
+  "institution": "University of Montana",
+  "location": "Missoula, Montana, USA",
+  "email": "connor_knowles@ymail.com",
+  "bio": "Computer Science student at the University of Montana with a passion for software engineering, mobile development, and automated vulnerability detection. Enjoys building secure, unique, and user-centered software.",
+  "researchKeywords": [
+    "Software Engineering",
+    "Mobile Development",
+    "Automated Detection of Software Vulnerabilities",
+    "Data Visualization",
+    "Web Design"
+  ],
+  "social": {
+    "github": "https://github.com/cknowles01?tab=repositories",
+    "linkedin": "https://linkedin.com/in/connor-knowles"
+  },
+  "honors": [
+    {
+      "title": "Dean's List",
+      "institution": "University of Montana",
+      "year": "5x",
+      "description": "Recognized for academic excellence with GPA above 3.5"
+    },
+    {
+      "title": "3.5+ Cumulative GPA",
+      "institution": "University of Montana",
+      "year": "2025",
+      "description": "Maintained GPA above 3.5 throughout enrollment"
+    },
+    {
+      "title": "Mobile Application Development",
+      "institution": "University of Montana",
+      "year": "2024",
+      "description": "Received an A letter-grade using kotlin and Android Studio"
+    },
+    {
+      "title": "Data Visualization",
+      "institution": "University of Montana",
+      "year": "2024",
+      "description": "Received an A letter-grade using d3 javascript library to create interactive data visualizations"
+    },
+    {
+      "title": "Computer Architecture",
+      "institution": "University of Montana",
+      "year": "2024",
+      "description": "Received an A letter-grade using logic gates to build a functioning computer"
+    },
+    {
+      "title": "Sports Analytics",
+      "institution": "University of Montana",
+      "year": "2025",
+      "description": "Received an A letter-grade utilizing python to compute statistics and probabilities"
+    },
+    {
+      "title": "Advanced Web Application Development",
+      "institution": "University of Montana",
+      "year": "2023",
+      "description": "Received an A letter-grade using React and Flutter to create interactive websites"
+    }
+  ]
+}

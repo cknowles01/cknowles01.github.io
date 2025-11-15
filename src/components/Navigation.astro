@@ -1,0 +1,74 @@
+---
+import ThemeToggle from './ThemeToggle.astro';
+
+const currentPath = Astro.url.pathname;
+---
+
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-200 dark:border-gray-800">
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex justify-between items-center h-16">
+      <a href="/" class="text-xl font-bold text-primary-600 dark:text-primary-400 hover:text-primary-700 dark:hover:text-primary-300 transition-colors">
+        Connor Knowles
+      </a>
+      
+      <div class="flex items-center space-x-8">
+        <div class="hidden md:flex space-x-6">
+          <a 
+            href="/" 
+            class:list={[
+              "hover:text-primary-600 dark:hover:text-primary-400 transition-colors",
+              currentPath === "/" ? "text-primary-600 dark:text-primary-400 font-semibold" : "text-gray-700 dark:text-gray-300"
+            ]}
+          >
+            Home
+          </a>
+          <a 
+            href="/projects" 
+            class:list={[
+              "hover:text-primary-600 dark:hover:text-primary-400 transition-colors",
+              currentPath === "/projects" ? "text-primary-600 dark:text-primary-400 font-semibold" : "text-gray-700 dark:text-gray-300"
+            ]}
+          >
+            Projects
+          </a>
+          <a 
+            href="/contact" 
+            class:list={[
+              "hover:text-primary-600 dark:hover:text-primary-400 transition-colors",
+              currentPath === "/contact" ? "text-primary-600 dark:text-primary-400 font-semibold" : "text-gray-700 dark:text-gray-300"
+            ]}
+          >
+            Contact
+          </a>
+        </div>
+        
+        <ThemeToggle />
+        
+        <!-- Mobile Menu Button -->
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-gray-200 dark:border-gray-800">
+    <div class="px-4 py-4 space-y-3">
+      <a href="/" class="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300">Home</a>
+      <a href="/projects" class="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300">Projects</a>
+      <a href="/contact" class="block px-3 py-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-gray-700 dark:text-gray-300">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<script>
+  const mobileMenuButton = document.getElementById('mobile-menu-button');
+  const mobileMenu = document.getElementById('mobile-menu');
+  
+  mobileMenuButton?.addEventListener('click', () => {
+    mobileMenu?.classList.toggle('hidden');
+  });
+</script>

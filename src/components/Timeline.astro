@@ -1,0 +1,77 @@
+---
+import timelineData from '../data/timeline.json';
+
+const getTypeIcon = (type: string) => {
+  switch(type) {
+    case 'award':
+      return '🏆';
+    case 'achievement':
+      return '⭐';
+    case 'education':
+      return '🎓';
+    case 'experience':
+      return '💼';
+    default:
+      return '📍';
+  }
+};
+
+const getTypeColor = (type: string) => {
+  switch(type) {
+    case 'award':
+      return 'bg-yellow-100 dark:bg-yellow-900/30 text-yellow-700 dark:text-yellow-300';
+    case 'achievement':
+      return 'bg-purple-100 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300';
+    case 'education':
+      return 'bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300';
+    case 'experience':
+      return 'bg-green-100 dark:bg-green-900/30 text-green-700 dark:text-green-300';
+    default:
+      return 'bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300';
+  }
+};
+---
+
+<section class="section-container">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-12">Academic Journey</h2>
+    
+    <div class="space-y-8">
+      {timelineData.map((item, index) => (
+        <div class="flex gap-4">
+          <div class="flex flex-col items-center">
+            <div class:list={[
+              "w-12 h-12 rounded-full flex items-center justify-center text-2xl",
+              getTypeColor(item.type)
+            ]}>
+              {getTypeIcon(item.type)}
+            </div>
+            {index !== timelineData.length - 1 && (
+              <div class="w-0.5 flex-1 bg-gray-300 dark:bg-gray-600 mt-2"></div>
+            )}
+          </div>
+          
+          <div class="flex-1 pb-8">
+            <div class="flex items-center gap-3 mb-2">
+              <span class="text-primary-600 dark:text-primary-400 font-semibold">
+                {item.date}
+              </span>
+              <span class:list={[
+                "px-2 py-1 text-xs font-medium rounded capitalize",
+                getTypeColor(item.type)
+              ]}>
+                {item.type}
+              </span>
+            </div>
+            <h3 class="text-xl font-semibold text-gray-900 dark:text-gray-100 mb-2">
+              {item.title}
+            </h3>
+            <p class="text-gray-700 dark:text-gray-300">
+              {item.description}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
