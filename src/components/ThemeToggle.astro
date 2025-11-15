@@ -35,7 +35,7 @@
     }
   }
 
-  updateIcons(theme);
+  updateIcons(theme ?? "default_theme");
 
   document.getElementById('theme-toggle')?.addEventListener('click', () => {
     const currentTheme = document.documentElement.classList.contains('dark') ? 'dark' : 'light';
